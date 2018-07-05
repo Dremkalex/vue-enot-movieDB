@@ -1,21 +1,30 @@
-import Vue from "vue";
-import Router from "vue-router";
-import Home from "./views/Home.vue";
-import About from "./views/About.vue";
+import Vue from 'vue'
+import Router from 'vue-router'
+import Films from './views/Films.vue'
+import Series from './views/Series.vue'
+import MovieInfo from './views/MovieInfo.vue'
 
-Vue.use(Router);
+Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: "/",
-      name: "home",
-      component: Home
+      // дефолтная страница при откыртии сайта
+      path: '/films',
+      name: 'Films',
+      component: Films
     },
     {
-      path: "/about",
-      name: "about",
-      component: About
+      // страница с отображением сериалов
+      path: '/series',
+      name: 'Series',
+      component: Series
+    },
+    {
+      // страница с подробным описанием фильма по клику на Блок Фильма
+      path: '/info',
+      name: 'MovieInfo',
+      component: MovieInfo
     }
   ]
-});
+})
