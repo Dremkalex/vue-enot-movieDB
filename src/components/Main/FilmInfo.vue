@@ -1,5 +1,6 @@
 <template lang="html">
-  <div id="app-movie-info">
+  <div class="film-info">
+    <h1>Описание</h1>
     <!--
       Макет 1440-4
       Минимальный набор:
@@ -12,8 +13,20 @@
 </template>
 
 <script>
+
+import EventBus from '../../event-bus.js';
+import LayoutDefault from '../../layouts/LayoutDefault.vue';
+
 export default {
-  name: 'MovieInfo'
+  name: 'FilmInfo',
+  props: ['id'],
+  created () {
+    this.$emit(`update:layout`, LayoutDefault);
+    EventBus.$on('sendFilmId', function (id) {
+      this.id = id;
+    });
+  }
+
 }
 
 // получает данные с Films или Series

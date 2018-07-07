@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
 import Films from './views/Films.vue'
 import Series from './views/Series.vue'
-import MovieInfo from './views/MovieInfo.vue'
+import FilmInfo from './components/Main/FilmInfo.vue'
 
 Vue.use(Router)
 
@@ -10,7 +11,7 @@ export default new Router({
   routes: [
     {
       // дефолтная страница при откыртии сайта
-      path: '/films',
+      path: '/',
       name: 'Films',
       component: Films
     },
@@ -23,8 +24,8 @@ export default new Router({
     {
       // страница с подробным описанием фильма по клику на Блок Фильма
       path: '/info',
-      name: 'MovieInfo',
-      component: MovieInfo
+      name: 'FilmInfo',
+      component: FilmInfo
     }
   ]
 })

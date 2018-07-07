@@ -1,27 +1,31 @@
 <template lang="html">
   <div id="app">
     <!-- Для проверки работы Vue Cli -->
+    <component :is="layout">
+      <router-view :layout.sync="layout"/>
+    </component>
     <!-- Раскомитить по мере заполенения файлов -->
-    <Header></Header>
-
+    <!-- <Header></Header> -->
     <!-- <Main></Main> -->
     <!-- <Footer></Footer> -->
+    <!-- <router-view></router-view> -->
   </div>
 </template>
 
 <script>
 // Раскомитить по мере заполенения файлов
-  import Header from './components/Header/Header.vue'
+// import Header from './components/Header/Header.vue';
 // import Main from '@/components/Main/Main.vue'
 // import Footer from '@/components/Footer/Footer.vue'
 
-export default {
-  name: 'App',
-  data
-  components: {
-    Header
+  export default {
+    name: 'App',
+    data() {
+      return {
+        layout: `div`,
+      };
+    },
   }
-}
 </script>
 
 <style lang="scss">

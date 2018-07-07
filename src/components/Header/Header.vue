@@ -9,7 +9,7 @@
     </div>
 
 
-    <Sidebar v-show="show"></Sidebar>
+    <Sidebar :show="show" v-show="show"></Sidebar>
 
     <!-- <Search></Search> -->
   </div>
@@ -40,7 +40,7 @@ export default {
     width: 100%;
 //Высоту уберем
     height: 56px;
-    position: fixed;
+// position: fixed;
     top: 0;
     left: 0;
     z-index: 80;
