@@ -37,7 +37,7 @@ export default {
   }
 
   .slide-transition {
-    transition: all .s cubic-bezier(.65, .05, .36, 1);
+    transition: all 1.s cubic-bezier(.65, .05, .36, 1);
   }
 
   .slide-enter, .slide-leave {
